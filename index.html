@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Manipulation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', filename='menu.css') }}">
+
+</head>
+<body>
+    <div class="logo">
+    <img src="{{ url_for('serve_static', filename='logo5.jpg') }}" alt="Sample Image">
+    </div>
+    <div class="heading">
+        <h1 class="bounce"> EVERY TOOL NEEDED TO EDIT A PDF NOW IN ONE PLACE -> </h1>
+    </div><hr>
+    {% include 'menu.html' %}
+
+
+    <div id="menu-container"></div>
+    <div class="full-box">
+        <div class="box box0">
+
+            <h1><a href="{{ url_for('merge') }}">Merge PDF Files</a></h1>
+            <p>Combine PDFs in the order you want with the easiest PDF merger available.</p>
+        </div>
+
+        <div class="box box1">
+            <h1><a href="{{ url_for('split') }}">split pdf files</a></h1>
+            <p>Separate one page or a whole set for easy conversion into independent PDF files.</p>
+        </div>
+
+        <div class="box box2">
+            <h1><a href="{{ url_for('compress') }}">compress pdf </a></h1>
+            <p>Reduce file size while optimizing for maximal PDF quality.</p>
+        </div>
+
+        <div class="box box3">
+            <h1> <a href="{{ url_for('pdf_docx') }}">pdf to docx </a></h1>
+            <p>Convert your PDF to WORD documents with incredible accuracy.</p>
+        </div>
+
+        <div class="box box4">
+            <h1> <a href="{{ url_for('Pdf_jpg') }}">pdf to jpg </a></h1>
+            <p>Convert JPG images to PDF in seconds. Easily adjust orientation and margins.</p>
+        </div>
+
+        <div class="box box5">
+            <h1><a href="{{ url_for('Pagenumber') }}">Page Number </a></h1>
+            <p>Add page number to PDF in seconds. As easy as you may think.</p>
+        </div>
+        </div>
+    <div class="footer">
+        <hr>
+        <h4>Thanks For Visiting Our Site.</h4>
+        <h4>Contact Details:<br>Email: sraj98616@gmail.com<br>Phone Number: 9931758880</h4>
+        <hr>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+html {
+    background-color: rgb(18, 19, 19);
+    }
+    .logo {
+        height: 8px;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-bottom: 40px;
+        padding-right: 60px;
+    }
+    .logo img {
+        border-radius: 70px;
+        width: 120px;
+        height: 100px;
+        margin-top: -9px;
+    }
+    .heading h1 {
+        font-size: 2rem;
+        color: rgb(0, 0, 0);
+        margin: 0px;
+        font-family: inherit;
+        font-style: oblique;
+        animation: bounce 10s infinite;
+    }
+    .heading {
+        text-align: center;
+        background-color: rgb(56, 128, 128);
+        padding: 20px 12px 12px 44px;
+    }
+.menu ul {
+    list-style-type: none;
+    padding-left: 1px;
+}
+.menu ul li {
+    display: inline; /* Display menu items inline */
+    margin-left: auto;
+    margin-right:auto; /* Add spacing between menu items */
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+/* Style for link text */
+.menu ul li a {
+    text-decoration: none; /* Remove underlines from links */
+}
+a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #bdb5b5;
+    padding: 5px 25px;
+}
+    a:hover {
+        background-color: rgb(56, 128, 128)/* Change background color on hover */
+    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.full-box {
+    display:flex;
+    flex-wrap:wrap ;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 110px;
+}
+.box{
+        text-align: center;
+        color:rgb(0, 0, 0);
+        display: grid;
+        box-sizing: unset;
+        max-width: 310px;
+        margin: 10px;
+        background-color: rgb(61, 114, 114);
+        border-radius: 80px;
+        padding: 20px;
+        width: 90%;
+        position: sticky;
+        cursor: pointer;
+        transform: scale(.9);
+    }
+.footer{
+    text-align-last: center;
+    color: bisque;
+    color: rgb(255, 255, 255);
+}
+ @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+.navbar{
+    animation: bounce 9s linear infinite;
+}
+
+#Button{
+    background-color: #802d2d;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.3s ease 0s;
+    outline: none;
+    border-radius: 10px;
+    letter-spacing: 5px;
+    font-size: medium;
+    font-weight: bold;
+}
+.bigcontainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+}

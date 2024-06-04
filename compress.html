@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPRESS PDF</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', filename='menu.css') }}">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="{{ url_for('serve_static', filename='logo5.jpg') }}" alt="Sample Image">
+        </div>
+    <div class="heading">
+        <h1>COMPRESSING PDF DOCUMENTS NOW EASIER -> </h1>
+    </div><hr>
+    {% include 'menu.html' %}
+    <div class="heading">
+        <h1>COMPRESS PDF FILES</h1>
+    </div>
+    <div class="bigcontainer">
+    <div class="box">
+        <h3>Reduce file size while optimizing for maximal PDF quality.</h3><br>
+        <div class="container">
+            <form action="/upload" method="post"  enctype="multipart/form-data">
+                <label for="fileInput">Select PDF Files</label>
+                <input type="file" name="file" accept=".pdf" multiple>
+                <button id="Button" type="submit">Generate</button>
+            </form>
+        </div>
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+        © SSSSS PDF 2023 ® - SSSSS PDF EditorS    </div>
+    </body>
+    </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body>
+   
+    <nav>
+    <div class="menu">
+        <ul>
+            <div class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('merge') }}">Merge</a></li>
+                    <li><a href="{{ url_for('compress') }}">Compress</a></li>
+                    <li><a href="{{ url_for('Pagenumber') }}">Page Number</a></li>
+                    <li><a href="{{ url_for('pdf_docx') }}">PDF to DOCX</a></li>
+                    <li><a href="{{ url_for('Pdf_jpg') }}">PDF to JPG</a></li>
+                    <li><a href="{{ url_for('split') }}">Split</a></li>
+                <hr></ul>
+            </div>
+    </nav>
+</body>
+</html>

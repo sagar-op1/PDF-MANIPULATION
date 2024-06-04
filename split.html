@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPLIT PDF</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', filename='menu.css') }}">
+  
+</head>
+
+<body>
+    <div class="logo">
+        <img src="{{ url_for('serve_static', filename='logo5.jpg') }}" alt="Sample Image">
+        </div>
+    <div class="heading">
+        <h1>EASILY SPLIT YOUR PDF DOCUMENTS -></h1>
+    </div><hr>
+    {% include 'menu.html' %}
+    <div class="heading">
+        <h1>SPLIT PDF FILES</h1>
+    </div>
+    {% if success %}
+        <!-- <p style="color: green;">{{ success }}</p> -->
+        <script>
+            // Automatically trigger download links on page load
+            window.onload = function() {
+                var downloadLinks = document.querySelectorAll('.download-link');
+                downloadLinks.forEach(function(link) {
+                    simulateClick(link);
+                });
+            };
+
+            // Function to simulate a click event
+            function simulateClick(element) {
+                var event = new MouseEvent('click', {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                });
+                element.dispatchEvent(event);
+            }
+        </script>
+    {% endif %}
+<div class="bigcontainer">
+    <div class="box">
+        <h3>Separate one page or a whole set for easy conversion into independent PDF files.</h3><br>
+        <div class="container">
+            <form action="/split" method="post" enctype="multipart/form-data">
+                <label for="pdf_files">Select PDF file(s):</label>
+                <input type="file" name="pdf_files" id="pdf_files" accept=".pdf" multiple required>
+                <button id="Button" type="submit">Split PDF</button>
+            </form>
+        </div>
+        {% if split_results %}
+            {% for result in split_results %}
+                <div>
+                    <a href="{{ url_for('download_part', filename=result.part1) }}" class="download-link" download></a>
+                    <a href="{{ url_for('download_part', filename=result.part2) }}" class="download-link" download></a>
+                </div>
+            {% endfor %}
+    {% endif %}
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+        © SSSSS PDF 2023 ® - SSSSS PDF EditorS    </div>
+
+
+    </body>
+    </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERGE PDF</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', filename='menu.css') }}">
+
+
+</head>
+
+<body>
+    <div class="logo">
+        <img src="{{ url_for('serve_static', filename='logo5.jpg') }}" alt="Sample Image">
+    </div>
+    <div class="heading">
+        <h1>MERGING PDF DOCUMENTS NOW EASIER -></h1>
+    </div>
+    <hr>
+    {% include 'menu.html' %}
+
+    <div class="heading">
+        <h1>MERGE PDF FILES</h1>
+    </div>
+    <div class="bigcontainer">
+    <div class="box">
+        <h3>Combine PDFs in the order you want with the easiest PDF merger available.</h3><br>
+        <div class="container">
+            <form method="post" enctype="multipart/form-data">
+                <label for="fileInput">Select PDF Files</label>
+                <input type="file" name="pdf_files" accept=".pdf" multiple>
+                <button id= "Button" type="submit">Generate</button>
+            </form>
+        </div>
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+        © SSSSS PDF 2023 ® - SSSSS PDF EditorS </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE NUMBER</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', filename='menu.css') }}">
+
+
+    
+</head>
+
+<body>
+    <div class="logo">
+        <img src="{{ url_for('serve_static', filename='logo5.jpg') }}" alt="Sample Image">
+        </div>
+    <div class="heading">
+        <h1>ADDING PAGE NUMBERS TO PDF NOW EASIER -></h1>
+    </div><hr>
+    {% include 'menu.html' %}
+    <div class="heading">
+        <h1>ADD PAGE NUMBER</h1>
+    </div>
+    <div class="bigcontainer">
+    <div class="box">
+        <h3>Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.</h3><br>
+        <div class="container">
+            <form method="POST" enctype="multipart/form-data">
+                <label for="pdf_file">Select PDF File:</label>
+                <input type="file" name="pdf_file" id="pdf_file" accept=".pdf" required>
+                <button id="Button" type="submit">Add Page Numbers</button>
+            </form>
+
+        </div>
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+        © SSSSS PDF 2023 ® - SSSSS PDF EditorS    </div>
+
+
+    </body>
+    </html>
